@@ -1,3 +1,8 @@
 = Autofactura
 
-This project rocks and uses MIT-LICENSE.
+AutoFactura.com es un servicio de Facturacion Electronica (CFDi) en Mexico.
+Mediante esta gema podras utilizar y consumir el API de AutoFactura.com de manera sencilla.
+
+```ruby
+gem 'autofactura', git: 'git://github.com/andresamayadiaz/autofactura.git'
+```
