@@ -32,9 +32,9 @@ module Autofactura
     
     # Privado
     private
-  
-      def invalid
-        self.user.blank? || self.sucursal.blank?
+    
+      def self.invalid?
+       self.user.blank? || self.sucursal.blank? || self.url.blank?
       end
     
   end
@@ -43,7 +43,7 @@ module Autofactura
   # Clase Serie
   class Serie
     
-    attr_accessible :id, :nombre
+    attr_accessor :id, :nombre
     
   end
   # Termina Clase Serie
