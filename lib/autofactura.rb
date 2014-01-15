@@ -28,8 +28,8 @@ module Autofactura
       puts request.body
       
       series = []
-      request.body.each do |serie|
-        series.push Serie.new(serie)
+      JSON.parse(request.body.to_s).each do |serie|
+        series.push Serie.new({:id => serie['id'], :nombre => serie['nombre']})
       end
       return series
       
