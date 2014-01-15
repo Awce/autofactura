@@ -9,11 +9,11 @@ module Autofactura
     attr_accessor :url, :user, :sucursal
     
     # initialize
-    def initialize(config = {})
+    def initialize(params)
       
-      self.url = config[:url].blank? ? "http://app.autofactura.com/users/api/" : config[:url]
-      self.user = config[:user].blank? ? "" : config[:user]
-      self.sucursal = config[:sucursal].blank? ? "" : config[:sucursal]
+      self.url = params[:url].blank? ? "http://app.autofactura.com/users/api/" : params[:url]
+      self.user = params[:user].blank? ? "" : params[:user]
+      self.sucursal = params[:sucursal].blank? ? "" : params[:sucursal]
       
     end
     
@@ -26,7 +26,12 @@ module Autofactura
       }
       request = Net::HTTP.post_form(URI.parse(self.url), params)
       puts request.body
-      return request
+      
+      series = []
+      request.body.each do |serie|
+        series.push Serie.new(serie)
+      end
+      return series
       
     end
     
@@ -44,6 +49,13 @@ module Autofactura
   class Serie
     
     attr_accessor :id, :nombre
+    
+    def initialize(params)
+      
+      self.id = params[:id]
+      self.nombre = params[:nombre]
+      
+    end
     
   end
   # Termina Clase Serie
