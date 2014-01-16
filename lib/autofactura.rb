@@ -31,9 +31,11 @@ module Autofactura
         'data[metodo]' => 'emitir',
         'data[userg]' => self.user,
         'data[sucursalg]' => self.sucursal,
-        'data[Comprobante]' => '',
+        'data[Comprobante]' => comprobante.to_json,
       }
-      #request = Net::HTTP.post_form(URI.parse(self.url), params)
+      request = Net::HTTP.post_form(URI.parse(self.url), params)
+      
+      return request
       
     end
     # Termina Metodo Ticket
@@ -153,9 +155,10 @@ module Autofactura
       self.metodoDePago = params[:metodoDePago].blank? ? "NO IDENTIFICADO" : params[:metodoDePago]
       self.numerocta = params[:numerocta].blank? ? "NO IDENTIFICADO" : params[:numerocta]
       self.version = params[:version].blank? ? "3.2" : params[:version]
-      self.tipoCambio = params[:tipoCambio].blank? ? 1.00 : params[:tipoCambio]
+      self.decimales = params[:decimales].blank? ? 2 : params[:decimales].to_i
+      self.tipoCambio = params[:tipoCambio].blank? ? 1.00 : params[:tipoCambio].to_f.round(self.decimales)
       self.moneda = params[:moneda].blank? ? "MXN" : params[:moneda]
-      self.decimales = params[:decimales].blank? ? 2 : params[:decimales]
+      self.descuento_porcentual = params[:descuento_porcentual].blank? ? 0.00 : params[:descuento_porcentual].to_f.round(self.decimales)
       
       # Receptor
       self.Receptor = Receptor.new(params[:Receptor])
@@ -168,26 +171,27 @@ module Autofactura
       #puts "------- CONCEPTOS -------"
       params[:Conceptos].each do |conc|
         imp = {}
+        conc[:descuento_porcentual] = self.descuento_porcentual
         concepto = Concepto.new(conc)
         
         unless concepto.tras_iva.blank?
-          imp[:tras_iva] = concepto.tras_iva
-          imp[:tras_iva_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.tras_iva / 100 )
+          imp[:tras_iva] = concepto.tras_iva.to_f.round(self.decimales)
+          imp[:tras_iva_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.tras_iva / 100 ).round(self.decimales)
         end
         
         unless concepto.tras_ieps.blank?
-          imp[:tras_ieps] = concepto.tras_ieps
-          imp[:tras_ieps_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.tras_ieps / 100 )
+          imp[:tras_ieps] = concepto.tras_ieps.to_f.round(self.decimales)
+          imp[:tras_ieps_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.tras_ieps / 100 ).round(self.decimales)
         end
         
         unless concepto.ret_iva.blank?
-          imp[:ret_iva] = concepto.ret_iva
-          imp[:ret_iva_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.ret_iva / 100 )
+          imp[:ret_iva] = concepto.ret_iva.to_f.round(self.decimales)
+          imp[:ret_iva_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.ret_iva / 100 ).round(self.decimales)
         end
         
         unless concepto.ret_isr.blank?
-          imp[:ret_isr] = concepto.ret_isr
-          imp[:ret_isr_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.ret_isr / 100 )
+          imp[:ret_isr] = concepto.ret_isr.to_f.round(self.decimales)
+          imp[:ret_isr_cant] = ( ( concepto.importe - concepto.descuento ) * concepto.ret_isr / 100 ).round(self.decimales)
         end
         
         self.Conceptos.push(concepto)
@@ -207,28 +211,27 @@ module Autofactura
       self.Impuestos.each do |impuesto|
         
         unless impuesto.tras_iva_cant.blank?
-          self.tras_iva_cant += impuesto.tras_iva_cant
+          self.tras_iva_cant += impuesto.tras_iva_cant.to_f.round(self.decimales)
         end
         
         unless impuesto.tras_ieps_cant.blank?
-          self.tras_ieps_cant += impuesto.tras_ieps_cant
+          self.tras_ieps_cant += impuesto.tras_ieps_cant.to_f.round(self.decimales)
         end
         
         unless impuesto.ret_iva_cant.blank?
-          self.ret_iva_cant += impuesto.ret_iva_cant
+          self.ret_iva_cant += impuesto.ret_iva_cant.to_f.round(self.decimales)
         end
         
         unless impuesto.ret_isr_cant.blank?
-          self.ret_isr_cant += impuesto.ret_isr_cant
+          self.ret_isr_cant += impuesto.ret_isr_cant.to_f.round(self.decimales)
         end
         
       end
       #puts "------- FIN IMPUESTOS -------"
       
       # Totales
-      self.descuento_porcentual = params[:descuento_porcentual].blank? ? 0.00 : params[:descuento_porcentual]
-      self.descuento = ( (self.subTotal * self.descuento_porcentual) / 100 )
-      self.total = self.subTotal - self.descuento + self.tras_iva_cant + self.tras_ieps_cant - self.ret_iva_cant - self.ret_isr_cant
+      self.descuento = ( (self.subTotal * self.descuento_porcentual) / 100 ).to_f.round(self.decimales)
+      self.total = ( self.subTotal - self.descuento + self.tras_iva_cant + self.tras_ieps_cant - self.ret_iva_cant - self.ret_isr_cant ).to_f.round(self.decimales)
       
     end
     
@@ -278,7 +281,7 @@ module Autofactura
     
     attr_accessor :cantidad, :unidad, :descripcion, :valorUnitario, :importe, :tras_iva, :ret_iva, :ret_isr, :tras_ieps, :tras_ieps_cant, :tras_iva_cant, :ret_iva_cant, :ret_isr_cant, :descuento, :descuento_porcentual
     
-    def initialize(params)
+    def initialize(params, decimales=2)
       
       # Generales
       self.cantidad = params[:cantidad]
@@ -287,27 +290,27 @@ module Autofactura
       self.valorUnitario = params[:valorUnitario]
       
       # Importe
-      self.importe = (self.cantidad * self.valorUnitario)
+      self.importe = (self.cantidad * self.valorUnitario).to_f.round(decimales)
       
       # Descuento
-      self.descuento_porcentual = params[:descuento_porcentual].blank? ? nil : params[:descuento_porcentual]
+      self.descuento_porcentual = params[:descuento_porcentual].blank? ? nil : params[:descuento_porcentual].to_f.round(decimales)
       if params[:descuento_porcentual].blank?
         self.descuento = 0.00
       else
-        self.descuento = ( self.importe * self.descuento_porcentual / 100 )
+        self.descuento = ( self.importe * self.descuento_porcentual / 100 ).to_f.round(decimales)
       end
       
       # Impuestos
       # Impuestos Porcentaje
-      self.tras_iva = params[:tras_iva].blank? ? 0 : params[:tras_iva].to_f
-      self.ret_iva = params[:ret_iva].blank? ? 0 : params[:ret_iva].to_f
-      self.ret_isr = params[:ret_isr].blank? ? 0 : params[:ret_isr].to_f
-      self.tras_ieps = params[:tras_ieps].blank? ? 0 : params[:tras_ieps].to_f
+      self.tras_iva = params[:tras_iva].blank? ? 0 : params[:tras_iva].to_f.round(decimales)
+      self.ret_iva = params[:ret_iva].blank? ? 0 : params[:ret_iva].to_f.round(decimales)
+      self.ret_isr = params[:ret_isr].blank? ? 0 : params[:ret_isr].to_f.round(decimales)
+      self.tras_ieps = params[:tras_ieps].blank? ? 0 : params[:tras_ieps].to_f.round(decimales)
       # Impuestos Cantidad
-      self.tras_ieps_cant = ( ( self.importe - self.descuento ) * params[:tras_ieps] / 100 )
-      self.ret_isr_cant = ( ( self.importe - self.descuento ) * params[:ret_isr] / 100 )
-      self.ret_iva_cant = ( ( self.importe - self.descuento ) * params[:ret_iva] / 100 )
-      self.tras_iva_cant = ( ( self.importe - self.descuento ) * params[:tras_iva] / 100 )
+      self.tras_ieps_cant = ( ( self.importe - self.descuento ) * params[:tras_ieps] / 100 ).to_f.round(decimales)
+      self.ret_isr_cant = ( ( self.importe - self.descuento ) * params[:ret_isr] / 100 ).to_f.round(decimales)
+      self.ret_iva_cant = ( ( self.importe - self.descuento ) * params[:ret_iva] / 100 ).to_f.round(decimales)
+      self.tras_iva_cant = ( ( self.importe - self.descuento ) * params[:tras_iva] / 100 ).to_f.round(decimales)
       
     end
     
