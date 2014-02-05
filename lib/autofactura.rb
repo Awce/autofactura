@@ -155,7 +155,7 @@ module Autofactura
       self.metodoDePago = params[:metodoDePago].blank? ? "NO IDENTIFICADO" : params[:metodoDePago]
       self.numerocta = params[:numerocta].blank? ? "NO IDENTIFICADO" : params[:numerocta]
       self.version = params[:version].blank? ? "3.2" : params[:version]
-      self.decimales = params[:decimales].blank? ? 2 : params[:decimales].to_i
+      self.decimales = params[:decimales].blank? ? 3 : params[:decimales].to_i
       self.tipoCambio = params[:tipoCambio].blank? ? 1.00 : params[:tipoCambio].to_f.round(self.decimales)
       self.moneda = params[:moneda].blank? ? "MXN" : params[:moneda]
       self.descuento_porcentual = params[:descuento_porcentual].blank? ? 0.00 : params[:descuento_porcentual].to_f.round(self.decimales)
@@ -281,7 +281,7 @@ module Autofactura
     
     attr_accessor :cantidad, :unidad, :descripcion, :valorUnitario, :importe, :tras_iva, :ret_iva, :ret_isr, :tras_ieps, :tras_ieps_cant, :tras_iva_cant, :ret_iva_cant, :ret_isr_cant, :descuento, :descuento_porcentual
     
-    def initialize(params, decimales=2)
+    def initialize(params, decimales=3)
       
       # Generales
       self.cantidad = params[:cantidad]
