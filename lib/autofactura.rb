@@ -365,7 +365,7 @@ module Autofactura
       self.metodopago = params[:metodopago].blank? ? "CONTADO" : params[:metodopago]
       self.moneda = params[:moneda].blank? ? "MXN" : params[:moneda]
       self.rate = params[:rate].blank? ? "1.00" : params[:rate]
-      self.desceunto = params[:descuento].blank? ? "0.00" : params[:descuento]
+      self.descuento = params[:descuento].blank? ? "0.00" : params[:descuento]
       self.articulos = params[:articulos]
       
     end
