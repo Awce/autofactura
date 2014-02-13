@@ -173,6 +173,7 @@ module Autofactura
       params[:Conceptos].each do |conc|
         imp = {}
         conc[:descuento_porcentual] = self.descuento_porcentual
+        conc[:decimales] = self.decimales
         concepto = Concepto.new(conc)
         
         unless concepto.tras_iva.blank?
