@@ -294,7 +294,7 @@ module Autofactura
       self.valorUnitario = params[:valorUnitario]
       
       # Importe
-      self.importe = (self.cantidad * self.valorUnitario).to_f.round(self.decimales)
+      self.importe = (self.cantidad * self.valorUnitario)
       
       # Descuento
       self.descuento_porcentual = params[:descuento_porcentual].blank? ? nil : params[:descuento_porcentual].to_f.round(self.decimales)
