@@ -199,8 +199,7 @@ module Autofactura
         self.Conceptos.push(concepto)
         self.Impuestos.push(Impuesto.new(imp))
         
-        self.subTotal += ( concepto.importe )
-        logger.info "AF >> Importe: " + concepto.importe.to_s + " SubTotal: " + self.subTotal.to_s
+        self.subTotal += ( concepto.importe ).round(self.decimales)
         
       end
       #puts "------- FIN CONCEPTOS -------"
