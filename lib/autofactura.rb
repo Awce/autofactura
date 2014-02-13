@@ -200,6 +200,7 @@ module Autofactura
         self.Impuestos.push(Impuesto.new(imp))
         
         self.subTotal += ( concepto.importe )
+        logger.info "AF >> Importe: " + concepto.importe.to_s + " SubTotal: " + self.subTotal.to_s
         
       end
       #puts "------- FIN CONCEPTOS -------"
