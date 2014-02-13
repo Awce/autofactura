@@ -281,7 +281,7 @@ module Autofactura
   # Clase Concepto
   class Concepto
     
-    attr_accessor :cantidad, :unidad, :descripcion, :valorUnitario, :importe, :tras_iva, :ret_iva, :ret_isr, :tras_ieps, :tras_ieps_cant, :tras_iva_cant, :ret_iva_cant, :ret_isr_cant, :descuento, :descuento_porcentual, :decimales
+    attr_accessor :cantidad, :unidad, :descripcion, :valorUnitario, :tras_iva, :ret_iva, :ret_isr, :tras_ieps, :tras_ieps_cant, :tras_iva_cant, :ret_iva_cant, :ret_isr_cant, :descuento, :descuento_porcentual, :decimales
     
     def initialize(params)
       
@@ -292,9 +292,6 @@ module Autofactura
       self.unidad = params[:unidad].blank? ? "NO APLICA" : params[:unidad]
       self.descripcion = params[:descripcion]
       self.valorUnitario = params[:valorUnitario]
-      
-      # Importe
-      self.importe = (self.cantidad * self.valorUnitario)
       
       # Descuento
       self.descuento_porcentual = params[:descuento_porcentual].blank? ? nil : params[:descuento_porcentual].to_f.round(self.decimales)
@@ -316,6 +313,11 @@ module Autofactura
       self.ret_iva_cant = ( ( self.importe - self.descuento ) * params[:ret_iva] / 100 ).to_f.round(self.decimales)
       self.tras_iva_cant = ( ( self.importe - self.descuento ) * params[:tras_iva] / 100 ).to_f.round(self.decimales)
       
+    end
+    
+    # Importe
+    def importe
+      (self.cantidad * self.valorUnitario).to_f.round(self.decimales)
     end
     
     def invalid
