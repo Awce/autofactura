@@ -199,7 +199,7 @@ module Autofactura
         self.Conceptos.push(concepto)
         self.Impuestos.push(Impuesto.new(imp))
         
-        self.subTotal += ( concepto.getimporte ).round(self.decimales)
+        self.subTotal += ( concepto.importe ).round(self.decimales)
         
       end
       #puts "------- FIN CONCEPTOS -------"
