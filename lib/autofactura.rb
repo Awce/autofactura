@@ -199,7 +199,7 @@ module Autofactura
         self.Conceptos.push(concepto)
         self.Impuestos.push(Impuesto.new(imp))
         
-        self.subTotal += ( concepto.importe ).round(self.decimales)
+        self.subTotal += ( concepto.importe )
         
       end
       #puts "------- FIN CONCEPTOS -------"
@@ -293,6 +293,9 @@ module Autofactura
       self.descripcion = params[:descripcion]
       self.valorUnitario = params[:valorUnitario]
       
+      # Importe
+      self.importe = (self.cantidad * self.valorUnitario).to_f.round(self.decimales)
+      
       # Descuento
       self.descuento_porcentual = params[:descuento_porcentual].blank? ? nil : params[:descuento_porcentual].to_f.round(self.decimales)
       if params[:descuento_porcentual].blank?
@@ -300,9 +303,6 @@ module Autofactura
       else
         self.descuento = ( self.importe * self.descuento_porcentual / 100 ).to_f.round(self.decimales)
       end
-      
-      # Importe
-      self.importe = (self.cantidad * self.valorUnitario).to_f.round(self.decimales)
       
       # Impuestos
       # Impuestos Porcentaje
@@ -316,11 +316,6 @@ module Autofactura
       self.ret_iva_cant = ( ( self.importe - self.descuento ) * params[:ret_iva] / 100 ).to_f.round(self.decimales)
       self.tras_iva_cant = ( ( self.importe - self.descuento ) * params[:tras_iva] / 100 ).to_f.round(self.decimales)
       
-    end
-    
-    # Importe
-    def getimporte
-      (self.cantidad * self.valorUnitario).to_f.round(self.decimales)
     end
     
     def invalid
