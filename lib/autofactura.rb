@@ -57,9 +57,11 @@ module Autofactura
         'data[metodo]' => 'ticket',
         'data[userg]' => self.user,
         'data[sucursalg]' => self.sucursal,
-        'data[nota]' => '',
+        'data[nota]' => nota.to_json,
       }
-      #request = Net::HTTP.post_form(URI.parse(self.url), params)
+      request = Net::HTTP.post_form(URI.parse(self.url), params)
+      
+      return request
       
     end
     # Termina Metodo Ticket
@@ -260,7 +262,7 @@ module Autofactura
   # Clase Domicilio
   class Domicilio
     
-    attr_accessor :noExterior, :noInterior, :calle, :colonia, :municipio, :estado, :pais, :codigoPostal
+    attr_accessor :noExterior, :noInterior, :calle, :colonia, :municipio, :estado, :pais, :codigoPostal, :referencia
     
     def initialize(params)
       
@@ -272,6 +274,7 @@ module Autofactura
       self.estado = params[:estado]
       self.pais = params[:pais]
       self.codigoPostal = params[:codigoPostal]
+      self.referencia = params[:referencia].blank? ? nil : params[:referencia]
       
     end
     
@@ -377,21 +380,56 @@ module Autofactura
   end
   # Termina Clase Remision
   
-  # Clase Articulo
-  class Articulo
+  # Clase Nota
+  class Nota
     
-    attr_accessor :nombre, :precios, :cantidades, :unidades, :ivatrans, :iepstrans, :ivaret, :isret
+    attr_accesor :Ingreso, :sucursal, :formaDePago, :metodoDePago, :moneda, :tipoCambio, :descuento, :Articulos, :decimales
     
     def initialize(params)
       
+      self.decimales = params[:decimales].blank? ? 3 : params[:decimales].to_i
+      
+      # TODO Duda Objeto Ingreso ???
+      self.sucursal = params[:sucursal].to_s
+      self.formaDePago = params[:formaDePago].to_s
+      self.metodoDePago = params[:metodoDePago].to_s
+      self.moneda = params[:moneda].blank? ? "MXN" : params[:moneda]
+      self.tipoCambio = params[:tipoCambio].blank? ? 1.000 : params[:tipoCambio].to_f.round(self.decimales)
+      self.descuento = params[:descuento].blank? ? 0.000 : params[:descuento].to_f.round(self.decimales)
+      
+      self.Articulos = Array.new
+      
+      params[:Articulos].each do |articulo|
+        
+        articulo[:decimales] = self.decimales
+        art = Articulo.new(articulo)
+        
+        self.Articulos.push(art)
+        
+      end
+      
+    end
+    
+  end
+  # Termina Clase Nota
+  
+  # Clase Articulo
+  class Articulo
+    
+    attr_accessor :nombre, :precios, :cantidades, :unidades, :ivatrans, :iepstrans, :ivaret, :isret, :decimales
+    
+    def initialize(params)
+      
+      self.decimales = params[:decimales].blank? ? 3 : params[:decimales].to_i
+      
       self.nombre = params[:nombre]
-      self.precios = params[:precios]
-      self.cantidades = params[:cantidades]
+      self.precios = params[:precios].to_f.round(self.decimales)
+      self.cantidades = params[:cantidades].to_f.round(self.decimales)
       self.unidades = params[:unidades].blank? ? "no aplica" : params[:unidades]
-      self.ivatrans = params[:ivatrans].blank? ? "0.00" : params[:ivatrans]
-      self.iepstrans = params[:iepstrans].blank? ? "0.00" : params[:iepstrans]
-      self.ivaret = params[:ivaret].blank? ? "0.00" : params[:ivaret]
-      self.isret = params[:isret].blank? ? "0.00" : params[:isret]
+      self.ivatrans = params[:ivatrans].blank? ? "0.00" : params[:ivatrans].to_f.round(self.decimales)
+      self.iepstrans = params[:iepstrans].blank? ? "0.00" : params[:iepstrans].to_f.round(self.decimales)
+      self.ivaret = params[:ivaret].blank? ? "0.00" : params[:ivaret].to_f.round(self.decimales)
+      self.isret = params[:isret].blank? ? "0.00" : params[:isret].to_f.round(self.decimales)
       
     end
     
