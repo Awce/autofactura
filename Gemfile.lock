@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    autofactura (0.1.9)
+    autofactura (0.2.4)
       rails (>= 3.2.14)
 
 GEM

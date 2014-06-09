@@ -390,6 +390,34 @@ module Autofactura
       self.decimales = params[:decimales].blank? ? 3 : params[:decimales].to_i
       
       # TODO Duda Objeto Ingreso ???
+      #{
+      #    "Ingreso": {
+      #        "sucursal": "Matriz",
+      #        "formapago": "Tarjeta",
+      #        "metodopago": "Tarjeta",
+      #        "moneda": "MXN",
+      #        "rate": "1.00",
+      #        "descuento": "0"
+      #    },
+      #    "Articulos": [{
+      #        "nombre": "Renovacion 2014-2015: rekargas.com",
+      #       "precios": "900",
+      #        "cantidades": "1",
+      #        "unidades": "Desarrollo",
+      #        "ivatrans": "16",
+      #        "iepstrans": "0",
+      #        "ivaret": "0",
+      #        "isret": "0"
+      #    }]
+      #}
+      
+      self.Ingreso[:sucursal] = params[:sucursal].to_s
+      self.Ingreso[:formaDePago] = params[:formaDePago].to_s
+      self.Ingreso[:metodoDePago] = params[:metodoDePago].to_s
+      self.Ingreso[:moneda] = params[:moneda].blank? ? "MXN" : params[:moneda]
+      self.Ingreso[:tipoCambio] = params[:tipoCambio].blank? ? 1.000 : params[:tipoCambio].to_f.round(self.decimales)
+      self.Ingreso[:descuento] = params[:descuento].blank? ? 0.000 : params[:descuento].to_f.round(self.decimales)
+      
       self.sucursal = params[:sucursal].to_s
       self.formaDePago = params[:formaDePago].to_s
       self.metodoDePago = params[:metodoDePago].to_s

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Autofactura_html.html - RDoc Documentation</title>
+
+<link href="../../../fonts.css" rel="stylesheet">
+<link href="../../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/navigation.js"></script>
+<script src="../../../js/search_index.js"></script>
+<script src="../../../js/search.js"></script>
+<script src="../../../js/searcher.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../MIT-LICENSE.html">MIT-LICENSE</a>
+  
+    <li><a href="../../../README_rdoc.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../autofactura_gemspec.html">autofactura.gemspec</a>
+  
+    <li><a href="../../../doc/ActiveSupport_html.html">ActiveSupport.html</a>
+  
+    <li><a href="../../../doc/ApplicationController_html.html">ApplicationController.html</a>
+  
+    <li><a href="../../../doc/ApplicationHelper_html.html">ApplicationHelper.html</a>
+  
+    <li><a href="../../../doc/Autofactura_html.html">Autofactura.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Articulo_html.html">Articulo.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Autofactura_html.html">Autofactura.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Comprobante_html.html">Comprobante.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Concepto_html.html">Concepto.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Domicilio_html.html">Domicilio.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Impuesto_html.html">Impuesto.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Nota_html.html">Nota.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Receptor_html.html">Receptor.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Remision_html.html">Remision.html</a>
+  
+    <li><a href="../../../doc/Autofactura/Serie_html.html">Serie.html</a>
+  
+    <li><a href="../../../doc/AutofacturaTest_html.html">AutofacturaTest.html</a>
+  
+    <li><a href="../../../doc/Dummy_html.html">Dummy.html</a>
+  
+    <li><a href="../../../doc/Dummy/Application_html.html">Application.html</a>
+  
+    <li><a href="../../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../../../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li><a href="../../../doc/MIT-LICENSE_html.html">MIT-LICENSE.html</a>
+  
+    <li><a href="../../../doc/Object_html.html">Object.html</a>
+  
+    <li><a href="../../../doc/README_rdoc_html.html">README_rdoc.html</a>
+  
+    <li><a href="../../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../../doc/autofactura_gemspec_html.html">autofactura_gemspec.html</a>
+  
+    <li><a href="../../../doc/fonts_css.html">fonts.css</a>
+  
+    <li><a href="../../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../../doc/js/search_js.html">search.js</a>
+  
+    <li><a href="../../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../../doc/lib/tasks/autofactura_tasks_rake_html.html">autofactura_tasks_rake.html</a>
+  
+    <li><a href="../../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../../doc/rdoc/Autofactura/Autofactura_html_html.html">Autofactura_html.html</a>
+  
+    <li><a href="../../../doc/rdoc/Autofactura/Serie_html_html.html">Serie_html.html</a>
+  
+    <li><a href="../../../doc/rdoc/Autofactura_html_html.html">Autofactura_html.html</a>
+  
+    <li><a href="../../../doc/rdoc/README_rdoc_html_html.html">README_rdoc_html.html</a>
+  
+    <li><a href="../../../doc/rdoc/index_html_html.html">index_html.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/search_js_html.html">search_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li><a href="../../../doc/rdoc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li><a href="../../../doc/rdoc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li><a href="../../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../../doc/test/dummy/README_rdoc_html.html">README_rdoc.html</a>
+  
+    <li><a href="../../../doc/test/dummy/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../../doc/test/dummy/app/assets/javascripts/application_js_html.html">application_js.html</a>
+  
+    <li><a href="../../../doc/test/dummy/app/assets/stylesheets/application_css_html.html">application_css.html</a>
+  
+    <li><a href="../../../doc/test/dummy/config_ru_html.html">config_ru.html</a>
+  
+    <li><a href="../../../doc/test/dummy/log/test_log_html.html">test_log.html</a>
+  
+    <li><a href="../../../doc/test/dummy/public/404_html_html.html">404_html.html</a>
+  
+    <li><a href="../../../doc/test/dummy/public/422_html_html.html">422_html.html</a>
+  
+    <li><a href="../../../doc/test/dummy/public/500_html_html.html">500_html.html</a>
+  
+    <li><a href="../../../doc/test/dummy/public/favicon_ico_html.html">favicon_ico.html</a>
+  
+    <li><a href="../../../lib/tasks/autofactura_tasks_rake.html">autofactura_tasks.rake</a>
+  
+    <li><a href="../../../rdoc/Autofactura_html.html">Autofactura.html</a>
+  
+    <li><a href="../../../rdoc/Autofactura/Autofactura_html.html">Autofactura.html</a>
+  
+    <li><a href="../../../rdoc/Autofactura/Serie_html.html">Serie.html</a>
+  
+    <li><a href="../../../rdoc/README_rdoc_html.html">README_rdoc.html</a>
+  
+    <li><a href="../../../rdoc/index_html.html">index.html</a>
+  
+    <li><a href="../../../rdoc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../../rdoc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../../rdoc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../../rdoc/js/search_js.html">search.js</a>
+  
+    <li><a href="../../../rdoc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../../rdoc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../../rdoc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../../rdoc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../../test/dummy/README_rdoc.html">README</a>
+  
+    <li><a href="../../../test/dummy/Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../test/dummy/app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../test/dummy/app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../../../test/dummy/config_ru.html">config.ru</a>
+  
+    <li><a href="../../../test/dummy/log/test_log.html">test.log</a>
+  
+    <li><a href="../../../test/dummy/public/404_html.html">404.html</a>
+  
+    <li><a href="../../../test/dummy/public/422_html.html">422.html</a>
+  
+    <li><a href="../../../test/dummy/public/500_html.html">500.html</a>
+  
+    <li><a href="../../../test/dummy/public/favicon_ico.html">favicon.ico</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page doc/rdoc/Autofactura/Autofactura_html.html">
+
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta charset=“UTF-8”&gt;</p>
+
+<p>&lt;title&gt;Autofactura.html - RDoc Documentation&lt;/title&gt;</p>
+
+<p>&lt;link href=“../../fonts.css” rel=“stylesheet”&gt; &lt;link
+href=“../../rdoc.css” rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;../../&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script src=“../../js/jquery.js”&gt;&lt;/script&gt; &lt;script
+src=“../../js/navigation.js”&gt;&lt;/script&gt; &lt;script
+src=“../../js/search_index.js”&gt;&lt;/script&gt; &lt;script
+src=“../../js/search.js”&gt;&lt;/script&gt; &lt;script
+src=“../../js/searcher.js”&gt;&lt;/script&gt; &lt;script
+src=“../../js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” role=“document” class=“file”&gt; &lt;nav
+role=“navigation”&gt;</p>
+
+<pre>&lt;div id=&quot;project-navigation&quot;&gt;
+  &lt;div id=&quot;home-section&quot; role=&quot;region&quot; title=&quot;Quick navigation&quot; class=&quot;nav-section&quot;&gt;
+&lt;h2&gt;
+  &lt;a href=&quot;../../index.html&quot; rel=&quot;home&quot;&gt;Home&lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;div id=&quot;table-of-contents-navigation&quot;&gt;
+  &lt;a href=&quot;../../table_of_contents.html#pages&quot;&gt;Pages&lt;/a&gt;
+  &lt;a href=&quot;../../table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;../../table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/div&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>  &lt;div id=&quot;search-section&quot; role=&quot;search&quot; class=&quot;project-section initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;div id=&quot;search-field-wrapper&quot;&gt;
+    &lt;input id=&quot;search-field&quot; role=&quot;combobox&quot; aria-label=&quot;Search&quot;
+           aria-autocomplete=&quot;list&quot; aria-controls=&quot;search-results&quot;
+           type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; spellcheck=&quot;false&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;ul id=&quot;search-results&quot; aria-label=&quot;Search Results&quot;
+      aria-busy=&quot;false&quot; aria-expanded=&quot;false&quot;
+      aria-atomic=&quot;false&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;
+&lt;/form&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;div id=&quot;fileindex-section&quot; class=&quot;nav-section&quot;&gt;
+&lt;h3&gt;Pages&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Gemfile_lock.html&quot;&gt;Gemfile.lock&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../MIT-LICENSE.html&quot;&gt;MIT-LICENSE&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../README_rdoc.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../autofactura_gemspec.html&quot;&gt;autofactura.gemspec&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../lib/tasks/autofactura_tasks_rake.html&quot;&gt;autofactura_tasks.rake&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/Autofactura_html.html&quot;&gt;Autofactura.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/Autofactura/Autofactura_html.html&quot;&gt;Autofactura.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/Autofactura/Serie_html.html&quot;&gt;Serie.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/README_rdoc_html.html&quot;&gt;README_rdoc.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/index_html.html&quot;&gt;index.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/darkfish_js.html&quot;&gt;darkfish.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/jquery_js.html&quot;&gt;jquery.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/navigation_js.html&quot;&gt;navigation.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/search_js.html&quot;&gt;search.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/search_index_js.html&quot;&gt;search_index.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/js/searcher_js.html&quot;&gt;searcher.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/rdoc_css.html&quot;&gt;rdoc.css&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../rdoc/table_of_contents_html.html&quot;&gt;table_of_contents.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/README_rdoc.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/app/assets/javascripts/application_js.html&quot;&gt;application.js&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/app/assets/stylesheets/application_css.html&quot;&gt;application.css&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/config_ru.html&quot;&gt;config.ru&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/log/test_log.html&quot;&gt;test.log&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/public/404_html.html&quot;&gt;404.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/public/422_html.html&quot;&gt;422.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/public/500_html.html&quot;&gt;500.html&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../../test/dummy/public/favicon_ico.html&quot;&gt;favicon.ico&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;main role=“main” aria-label=“Page <a
+href="../../../rdoc/Autofactura/Autofactura_html.html">rdoc/Autofactura/Autofactura.html</a>”&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta
+content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;title&amp;gt;class &lt;a
+href=“../../Autofactura/Autofactura.html”&gt;Autofactura::Autofactura&lt;/a&gt;
+- Autofactura&amp;lt;/title&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;link type=“text/css” media=“screen” href=“../rdoc.css”
+rel=“stylesheet”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;script type=“text/javascript”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;var rdoc_rel_prefix = &amp;quot;../&amp;quot;;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/script&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;script type=“text/javascript” charset=“utf-8”
+src=“../js/jquery.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/navigation.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/search_index.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/search.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/searcher.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/darkfish.js”&amp;gt;&amp;lt;/script&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;body id=“top” class=“class”&amp;gt; &amp;lt;nav
+id=“metadata”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;nav id=&amp;quot;home-section&amp;quot;
+class=&amp;quot;section&amp;quot;&amp;gt; &amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;a href=&amp;quot;../index.html&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;../table_of_contents.html#classes&amp;quot;&amp;gt;Classes&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;../table_of_contents.html#methods&amp;quot;&amp;gt;Methods&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/h3&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;nav id=&amp;quot;search-section&amp;quot;
+class=&amp;quot;section project-section&amp;quot;
+class=&amp;quot;initially-hidden&amp;quot;&amp;gt; &amp;lt;form
+action=&amp;quot;#&amp;quot; method=&amp;quot;get&amp;quot;
+accept-charset=&amp;quot;utf-8&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;
+  &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;search&amp;quot; placeholder=&amp;quot;Search&amp;quot; id=&amp;quot;search-field&amp;quot;
+         title=&amp;quot;Type to search, Up and Down to navigate, Enter to load&amp;quot;&amp;gt;
+&amp;lt;/h3&amp;gt;</pre>
+
+<p>&amp;lt;/form&amp;gt;</p>
+
+<p>&amp;lt;ul id=&amp;quot;search-results&amp;quot;
+class=&amp;quot;initially-hidden&amp;quot;&amp;gt;&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;div id=&amp;quot;file-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;file-list-section&amp;quot; class=&amp;quot;section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;Defined
+In&amp;lt;/h3&amp;gt; &amp;lt;ul&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;lib/autofactura.rb</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;class-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;parent-class-section&amp;quot; class=&amp;quot;section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Parent&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;p class=&amp;quot;link&amp;quot;&amp;gt;Object&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;!– Method Quickref –&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;nav id=“method-list-section”
+class=“section”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Methods&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul class=&amp;quot;link-list&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#method-c-new&amp;quot;&amp;gt;::new&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;#method-i-series&amp;quot;&amp;gt;#series&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;project-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;fileindex-section&amp;quot; class=&amp;quot;section project-section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Pages&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul&amp;gt;</p>
+
+<pre>&amp;lt;li class=&amp;quot;file&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;../README_rdoc.html&amp;quot;&amp;gt;README&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;  &amp;lt;nav id=&amp;quot;classindex-section&amp;quot;
+class=&amp;quot;section project-section&amp;quot;&amp;gt; &amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Class and Module
+Index&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul class=&amp;quot;link-list&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../Autofactura.html&amp;quot;&amp;gt;Autofactura&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../Autofactura/Autofactura.html&amp;quot;&amp;gt;Autofactura::Autofactura&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;../Autofactura/Serie.html&amp;quot;&amp;gt;Autofactura::Serie&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;div id=“documentation”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span
+class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;h1&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;class&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;gt;&lt;/span&gt;&lt;span
+class=“ruby-keyword”&gt;class&lt;/span&gt; &lt;span
+class=“ruby-constant”&gt;Autofactura&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;::&lt;/span&gt;&lt;span
+class=“ruby-constant”&gt;Autofactura&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-regexp”&gt;/h1&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;description&amp;quot;
+class=&amp;quot;description&amp;quot;&amp;gt; &lt;/span&gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;p&amp;gt;Clase Principal &amp;lt;a
+href=“Autofactura.html”&amp;gt;Autofactura&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;&amp;lt;!– description –&amp;gt;</p>
+
+<p>&amp;lt;section id=&amp;quot;5Buntitled-5D&amp;quot;
+class=&amp;quot;documentation-section&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;!-- Attributes --&amp;gt;
+&amp;lt;section id=&amp;quot;attribute-method-details&amp;quot; class=&amp;quot;method-section section&amp;quot;&amp;gt;
+  &amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;Attributes&amp;lt;/h3&amp;gt;
+
+  &amp;lt;div id=&amp;quot;attribute-i-sucursal&amp;quot; class=&amp;quot;method-detail&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;method-heading attribute-method-heading&amp;quot;&amp;gt;
+      &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;sucursal&amp;lt;/span&amp;gt;&amp;lt;span
+        class=&amp;quot;attribute-access-type&amp;quot;&amp;gt;[RW]&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+
+  &amp;lt;div id=&amp;quot;attribute-i-url&amp;quot; class=&amp;quot;method-detail&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;method-heading attribute-method-heading&amp;quot;&amp;gt;
+      &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;url&amp;lt;/span&amp;gt;&amp;lt;span
+        class=&amp;quot;attribute-access-type&amp;quot;&amp;gt;[RW]&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+
+  &amp;lt;div id=&amp;quot;attribute-i-user&amp;quot; class=&amp;quot;method-detail&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;method-heading attribute-method-heading&amp;quot;&amp;gt;
+      &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;user&amp;lt;/span&amp;gt;&amp;lt;span
+        class=&amp;quot;attribute-access-type&amp;quot;&amp;gt;[RW]&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+
+&amp;lt;/section&amp;gt;&amp;lt;!-- attribute-method-details --&amp;gt;
+
+&amp;lt;!-- Methods --&amp;gt;
+
+ &amp;lt;section id=&amp;quot;public-class-5Buntitled-5D-method-details&amp;quot; class=&amp;quot;method-section section&amp;quot;&amp;gt;
+  &amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;Public Class Methods&amp;lt;/h3&amp;gt;
+
+  &amp;lt;div id=&amp;quot;method-c-new&amp;quot; class=&amp;quot;method-detail &amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-heading&amp;quot;&amp;gt;
+      &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt;&amp;lt;span
+        class=&amp;quot;method-args&amp;quot;&amp;gt;(config = {})&amp;lt;/span&amp;gt;
+      &amp;lt;span class=&amp;quot;method-click-advice&amp;quot;&amp;gt;click to toggle source&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+      &amp;lt;p&amp;gt;initialize&amp;lt;/p&amp;gt;
+
+      &amp;lt;div class=&amp;quot;method-source-code&amp;quot; id=&amp;quot;new-source&amp;quot;&amp;gt;
+        &amp;lt;pre&amp;gt;&amp;lt;span class=&amp;quot;ruby-comment&amp;quot;&amp;gt;# File lib/autofactura.rb, line 12&amp;lt;/span&amp;gt;&lt;/pre&gt;</pre>
+
+<p>&lt;p&gt;&amp;lt;span class=“ruby-keyword”&amp;gt;def&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=“ruby-identifier”&amp;gt;initialize&amp;lt;/span&amp;gt;(&amp;lt;span
+class=“ruby-identifier”&amp;gt;config&amp;lt;/span&amp;gt; = {})&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;span
+class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;url&amp;lt;/span&amp;gt; =
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:url&amp;lt;/span&amp;gt;].&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;blank?&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;?&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;amp;quot;<a
+href="http://app.autofactura.com/users/api/&amp;quot;&lt;/span&gt">app.autofactura.com/users/api/&amp;quot;&lt;/span&gt</a>;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;:&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:url&amp;lt;/span&amp;gt;]
+&amp;lt;span
+class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;user&amp;lt;/span&amp;gt;
+= &amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:user&amp;lt;/span&amp;gt;].&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;blank?&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;?&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;amp;quot;&amp;amp;quot;&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;:&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:user&amp;lt;/span&amp;gt;]
+&amp;lt;span
+class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;sucursal&amp;lt;/span&amp;gt;
+= &amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:sucursal&amp;lt;/span&amp;gt;].&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;blank?&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;?&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;amp;quot;&amp;amp;quot;&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;:&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;config&amp;lt;/span&amp;gt;[&amp;lt;span
+class=&amp;quot;ruby-value&amp;quot;&amp;gt;:sucursal&amp;lt;/span&amp;gt;]&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;span
+class=“ruby-keyword”&amp;gt;end&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;      &amp;lt;/div&amp;gt;&amp;lt;!– new-source –&amp;gt;</p>
+
+<pre>  &amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;&amp;lt;!-- new-method --&amp;gt;</pre>
+
+<p>&amp;lt;/section&amp;gt;&amp;lt;!– public-class-method-details –&amp;gt;</p>
+
+<pre>&amp;lt;section id=&amp;quot;public-instance-5Buntitled-5D-method-details&amp;quot; class=&amp;quot;method-section section&amp;quot;&amp;gt;
+ &amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;Public Instance Methods&amp;lt;/h3&amp;gt;
+
+ &amp;lt;div id=&amp;quot;method-i-series&amp;quot; class=&amp;quot;method-detail &amp;quot;&amp;gt;
+
+   &amp;lt;div class=&amp;quot;method-heading&amp;quot;&amp;gt;
+     &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;series&amp;lt;/span&amp;gt;&amp;lt;span
+       class=&amp;quot;method-args&amp;quot;&amp;gt;()&amp;lt;/span&amp;gt;
+     &amp;lt;span class=&amp;quot;method-click-advice&amp;quot;&amp;gt;click to toggle source&amp;lt;/span&amp;gt;
+   &amp;lt;/div&amp;gt;
+
+   &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+     &amp;lt;div class=&amp;quot;method-source-code&amp;quot; id=&amp;quot;series-source&amp;quot;&amp;gt;
+       &amp;lt;pre&amp;gt;&amp;lt;span class=&amp;quot;ruby-comment&amp;quot;&amp;gt;# File lib/autofactura.rb, line 20&amp;lt;/span&amp;gt;&lt;/pre&gt;</pre>
+
+<p>&lt;p&gt;&amp;lt;span class=“ruby-keyword”&amp;gt;def&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=“ruby-identifier”&amp;gt;series&amp;lt;/span&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;params&amp;lt;/span&amp;gt;
+= {</p>
+
+<pre>&amp;lt;span class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;#39;data[metodo]&amp;#39;&amp;lt;/span&amp;gt; =&amp;lt;span class=&amp;quot;ruby-operator&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;#39;series&amp;#39;&amp;lt;/span&amp;gt;,
+&amp;lt;span class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;#39;data[userg]&amp;#39;&amp;lt;/span&amp;gt; =&amp;lt;span class=&amp;quot;ruby-operator&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;user&amp;lt;/span&amp;gt;,
+&amp;lt;span class=&amp;quot;ruby-string&amp;quot;&amp;gt;&amp;#39;data[sucursalg]&amp;#39;&amp;lt;/span&amp;gt; =&amp;lt;span class=&amp;quot;ruby-operator&amp;quot;&amp;gt;&amp;amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;sucursal&amp;lt;/span&amp;gt;</pre>
+
+<p>} &amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;request&amp;lt;/span&amp;gt;
+= &amp;lt;span
+class=&amp;quot;ruby-constant&amp;quot;&amp;gt;Net&amp;lt;/span&amp;gt;&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;::&amp;lt;/span&amp;gt;&amp;lt;span
+class=&amp;quot;ruby-constant&amp;quot;&amp;gt;HTTP&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;post_form&amp;lt;/span&amp;gt;(&amp;lt;span
+class=&amp;quot;ruby-constant&amp;quot;&amp;gt;URI&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;parse&amp;lt;/span&amp;gt;(&amp;lt;span
+class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;self&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;url&amp;lt;/span&amp;gt;),
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;params&amp;lt;/span&amp;gt;)
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;puts&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;request&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;body&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-keyword&amp;quot;&amp;gt;return&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;request&amp;lt;/span&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;span
+class=“ruby-keyword”&amp;gt;end&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;        &amp;lt;/div&amp;gt;&amp;lt;!– series-source –&amp;gt;</p>
+
+<pre>    &amp;lt;/div&amp;gt;
+
+  &amp;lt;/div&amp;gt;&amp;lt;!-- series-method --&amp;gt;
+
+&amp;lt;/section&amp;gt;&amp;lt;!-- public-instance-method-details --&amp;gt;</pre>
+
+<p>&amp;lt;/section&amp;gt;&amp;lt;!– 5Buntitled-5D –&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/div&amp;gt;&amp;lt;!– documentation –&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;footer id=“validator-badges”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;p&amp;gt;&amp;lt;a
+href=“http://validator.w3.org/check/referer”&gt;[Validate]&lt;/a&gt;
+&amp;lt;p&amp;gt;Generated by &amp;lt;a href=&amp;quot;<a
+href="https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt">github.com/rdoc/rdoc“&gt;RDoc&lt;/a&gt</a>;
+3.12.2. &amp;lt;p&amp;gt;Generated with the &amp;lt;a href=&amp;quot;<a
+href="http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish">deveiate.org/projects/Darkfish-Rdoc/”&gt;Darkfish</a>
+Rdoc Generator&amp;lt;/a&amp;gt; 3.&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/footer&amp;gt;&lt;/p&gt; &lt;/main&gt;</p>
+
+<p>&lt;footer id=“validator-badges” role=“contentinfo”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;Validate&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;http://rdoc.rubyforge.org&quot;&gt;RDoc&lt;/a&gt; 4.1.1.
+&lt;p&gt;Based on &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish&lt;/a&gt; by &lt;a href=&quot;http://deveiate.org&quot;&gt;Michael Granger&lt;/a&gt;.</pre>
+
+<p>&lt;/footer&gt;</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

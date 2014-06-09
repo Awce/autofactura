@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AutofacturaTest - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveSupport::TestCase
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-create_comprobante">#create_comprobante</a>
+    
+    <li ><a href="#method-i-create_comprobante_descuento">#create_comprobante_descuento</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AutofacturaTest">
+  <h1 id="class-AutofacturaTest" class="class">
+    class AutofacturaTest
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_comprobante" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_comprobante</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_comprobante-source">
+            <pre><span class="ruby-comment"># File test/autofactura_test.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_comprobante</span>
+  
+  <span class="ruby-identifier">comp</span> = { 
+    <span class="ruby-value">:serie</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ABC&quot;</span>,
+    <span class="ruby-value">:tipoDeComprobante</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ingreso&quot;</span>,
+    <span class="ruby-value">:condicionesDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;CONTADO&quot;</span>,
+    <span class="ruby-value">:formaDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;PAGO EN UNA SOLA EXHIBICION&quot;</span>,
+    <span class="ruby-value">:metodoDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO IDENTIFICADO&quot;</span>,
+    <span class="ruby-value">:numerocta</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO IDENTIFICADO&quot;</span>,
+    <span class="ruby-value">:version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;3.2&quot;</span>,
+    <span class="ruby-value">:tipoCambio</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+    <span class="ruby-value">:moneda</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;MXN&quot;</span>,
+    <span class="ruby-value">:decimales</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>,
+    <span class="ruby-value">:Receptor</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:rfc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;RFC_RECEPTOR&quot;</span>,
+      <span class="ruby-value">:nombre</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ALGUNA RAZON SOCIAL SA DE CV&quot;</span>,
+      <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;andres.amaya.diaz@gmail.com&quot;</span>,
+      <span class="ruby-value">:Domicilio</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-value">:noExterior</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;103&quot;</span>,
+        <span class="ruby-value">:calle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;San Juan&quot;</span>,
+        <span class="ruby-value">:colonia</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Colonia&quot;</span>,
+        <span class="ruby-value">:municipio</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Monterrey&quot;</span>,
+        <span class="ruby-value">:estado</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Nuevo Leon&quot;</span>,
+        <span class="ruby-value">:pais</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Mexico&quot;</span>,
+        <span class="ruby-value">:codigoPostal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;66250&quot;</span>
+      } <span class="ruby-comment"># Fin Domicilio</span>
+    }, <span class="ruby-comment"># Fin Receptor</span>
+    <span class="ruby-value">:Conceptos</span> =<span class="ruby-operator">&gt;</span> [{
+        <span class="ruby-value">:cantidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:unidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO APLICA&quot;</span>,
+        <span class="ruby-value">:descripcion</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Primer Concepto de Prueba&quot;</span>,
+        <span class="ruby-value">:valorUnitario</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:ret_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_ieps</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>,
+        <span class="ruby-value">:ret_isr</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      },{
+        <span class="ruby-value">:cantidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:unidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO APLICA&quot;</span>,
+        <span class="ruby-value">:descripcion</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Segundo Concepto de Prueba&quot;</span>,
+        <span class="ruby-value">:valorUnitario</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:ret_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_ieps</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>,
+        <span class="ruby-value">:ret_isr</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      }], <span class="ruby-comment"># Fin Conceptos</span>
+      <span class="ruby-value">:Addenda</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>
+   }
+   
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">comp</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_comprobante_descuento" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_comprobante_descuento</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_comprobante_descuento-source">
+            <pre><span class="ruby-comment"># File test/autofactura_test.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_comprobante_descuento</span>
+  
+  <span class="ruby-identifier">comp</span> = { 
+    <span class="ruby-value">:serie</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ABC&quot;</span>,
+    <span class="ruby-value">:tipoDeComprobante</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ingreso&quot;</span>,
+    <span class="ruby-value">:condicionesDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;CONTADO&quot;</span>,
+    <span class="ruby-value">:formaDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;PAGO EN UNA SOLA EXHIBICION&quot;</span>,
+    <span class="ruby-value">:metodoDePago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO IDENTIFICADO&quot;</span>,
+    <span class="ruby-value">:numerocta</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO IDENTIFICADO&quot;</span>,
+    <span class="ruby-value">:version</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;3.2&quot;</span>,
+    <span class="ruby-value">:tipoCambio</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+    <span class="ruby-value">:moneda</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;MXN&quot;</span>,
+    <span class="ruby-value">:decimales</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>,
+    <span class="ruby-value">:descuento_porcentual</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+    <span class="ruby-value">:Receptor</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:rfc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;RFC_RECEPTOR&quot;</span>,
+      <span class="ruby-value">:nombre</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ALGUNA RAZON SOCIAL SA DE CV&quot;</span>,
+      <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;andres.amaya.diaz@gmail.com&quot;</span>,
+      <span class="ruby-value">:Domicilio</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-value">:noExterior</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;103&quot;</span>,
+        <span class="ruby-value">:calle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;San Juan&quot;</span>,
+        <span class="ruby-value">:colonia</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Colonia&quot;</span>,
+        <span class="ruby-value">:municipio</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Monterrey&quot;</span>,
+        <span class="ruby-value">:estado</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Nuevo Leon&quot;</span>,
+        <span class="ruby-value">:pais</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Mexico&quot;</span>,
+        <span class="ruby-value">:codigoPostal</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;66250&quot;</span>
+      } <span class="ruby-comment"># Fin Domicilio</span>
+    }, <span class="ruby-comment"># Fin Receptor</span>
+    <span class="ruby-value">:Conceptos</span> =<span class="ruby-operator">&gt;</span> [{
+        <span class="ruby-value">:cantidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:unidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO APLICA&quot;</span>,
+        <span class="ruby-value">:descripcion</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Primer Concepto de Prueba&quot;</span>,
+        <span class="ruby-value">:valorUnitario</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>,
+        <span class="ruby-value">:ret_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_ieps</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>,
+        <span class="ruby-value">:ret_isr</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      },{
+        <span class="ruby-value">:cantidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:unidad</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;NO APLICA&quot;</span>,
+        <span class="ruby-value">:descripcion</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Segundo Concepto de Prueba&quot;</span>,
+        <span class="ruby-value">:valorUnitario</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:ret_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_ieps</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:tras_iva</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">16</span>,
+        <span class="ruby-value">:ret_isr</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+      }], <span class="ruby-comment"># Fin Conceptos</span>
+      <span class="ruby-value">:Addenda</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>
+   }
+   
+   <span class="ruby-keyword">return</span> <span class="ruby-identifier">comp</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
