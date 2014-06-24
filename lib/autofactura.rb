@@ -383,7 +383,7 @@ module Autofactura
   # Clase Nota
   class Nota
     
-    attr_accessor :Ingreso, :sucursal, :formaDePago, :metodoDePago, :moneda, :tipoCambio, :descuento, :Articulos, :decimales
+    attr_accessor :Ingreso, :Articulos, :decimales
     
     def initialize(params)
       
