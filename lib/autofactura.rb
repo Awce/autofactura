@@ -411,19 +411,7 @@ module Autofactura
       #    }]
       #}
       
-      self.Ingreso[:sucursal] = params[:sucursal].to_s
-      self.Ingreso[:formaDePago] = params[:formaDePago].to_s
-      self.Ingreso[:metodoDePago] = params[:metodoDePago].to_s
-      self.Ingreso[:moneda] = params[:moneda].blank? ? "MXN" : params[:moneda]
-      self.Ingreso[:tipoCambio] = params[:tipoCambio].blank? ? 1.000 : params[:tipoCambio].to_f.round(self.decimales)
-      self.Ingreso[:descuento] = params[:descuento].blank? ? 0.000 : params[:descuento].to_f.round(self.decimales)
-      
-      self.sucursal = params[:sucursal].to_s
-      self.formaDePago = params[:formaDePago].to_s
-      self.metodoDePago = params[:metodoDePago].to_s
-      self.moneda = params[:moneda].blank? ? "MXN" : params[:moneda]
-      self.tipoCambio = params[:tipoCambio].blank? ? 1.000 : params[:tipoCambio].to_f.round(self.decimales)
-      self.descuento = params[:descuento].blank? ? 0.000 : params[:descuento].to_f.round(self.decimales)
+      self.Ingreso = Ingreso.new(params[:Ingreso])
       
       self.Articulos = Array.new
       
@@ -440,6 +428,26 @@ module Autofactura
     
   end
   # Termina Clase Nota
+  
+  # Clase Ingreso
+  class Ingreso
+    
+    attr_accessor :sucursal, :formapago, :metodopago, :moneda, :rate, :descuento
+    
+    def initialize(params)
+      
+      self.sucursal = params[:sucursal]
+      self.formapago = params[:formaDePago]
+      self.metodopago = params[:metodoDePago]
+      self.moneda = params[:moneda]
+      self.rate = params[:tipoCambio]
+      self.descuento = params[:descuento].blank? ? "0.00" : params[:descuento]
+      
+    end
+    
+  end
+  
+  # Termina Clase Ingreso
   
   # Clase Articulo
   class Articulo
